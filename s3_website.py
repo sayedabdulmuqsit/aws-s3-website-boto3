@@ -19,10 +19,10 @@ s3.upload_file(
 )
 
 print("index.html uploaded!")
-# Public access block hatao
+# Remove Public access block 
 s3.delete_public_access_block(Bucket=bucket_name)
 
-# Bucket policy set karo (public read)
+# Bucket policy set (public read)
 import json
 policy = {
     "Version": "2012-10-17",
@@ -39,7 +39,7 @@ s3.put_bucket_policy(
     Policy=json.dumps(policy)
 )
 
-# Static website hosting enable karo
+# Static website hosting enabling
 s3.put_bucket_website(
     Bucket=bucket_name,
     WebsiteConfiguration={
