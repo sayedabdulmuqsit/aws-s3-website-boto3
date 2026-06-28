@@ -4,6 +4,8 @@ s3 = boto3.client('s3', region_name='eu-north-1')
 
 bucket_name = 'muqsit-portfolio-site'
 
+#Creating Bucket
+
 #s3.create_bucket(
  #   Bucket=bucket_name,
   #  CreateBucketConfiguration={'LocationConstraint': 'eu-north-1'}
